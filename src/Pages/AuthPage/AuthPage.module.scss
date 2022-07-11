@@ -1,0 +1,79 @@
+.authPage {
+  padding-top: 30px;
+  background-color: #eff2f4;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.errorMsg {
+  text-align: center;
+  color: #e5465c;
+  font-size: 12px;
+  margin: 15px 0;
+}
+
+.underBlock {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 15px;
+  color: #808080;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  button {
+    background: transparent;
+    color: inherit;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.verifiedInput {
+  display: block;
+  width: 80%;
+  height: 58px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Fira Code', Consolas, Menlo, 'Courier New', monospace;
+  letter-spacing: 8px;
+}
+
+.verifiedP {
+  width: 80%;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.verifiedButton {
+  display: block;
+  width: 80%;
+  height: 58px;
+  margin: 20px auto;
+  padding: 0 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: linear-gradient(92.23deg, #7de481 9.24%, #46cd4b 95.15%);
+  cursor: pointer;
+  border: none;
+}

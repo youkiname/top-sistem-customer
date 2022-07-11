@@ -1,0 +1,175 @@
+@mixin scanBtn {
+	min-width: 50px;
+	height: inherit;
+	border-radius: 14px;
+	background-color: #0092ef;
+	border: none;
+	outline: none;
+}
+
+$redColor: #e5465c;
+
+.qrScanPage {
+	padding-top: 30px;
+	background-color: #eff2f4;
+}
+
+.error,
+.success {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	width: 80%;
+	height: 54px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	border-radius: 14px;
+	border: none;
+}
+
+.error {
+	background: linear-gradient(92.23deg, #d77150 9.24%, #e0765e 95.15%);
+	cursor: not-allowed;
+}
+
+.success {
+	background: linear-gradient(92.23deg, #7de481 9.24%, #46cd4b 95.15%);
+	cursor: pointer;
+}
+
+.cardNumber {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+
+	p {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+		color: #808080;
+	}
+
+	div {
+		max-width: 80%;
+		margin: 0 auto;
+		font-family: 'Fira Code', Consolas, Menlo, 'Courier New', monospace;
+		font-size: 22px;
+		font-weight: 700;
+		background-color: #e8e8e8;
+		padding: 20px;
+		border-radius: 10px;
+	}
+}
+
+.showInput {
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	background: transparent;
+	color: inherit;
+	border: none;
+	text-decoration: none;
+	cursor: pointer;
+
+	span {
+		margin-top: 10px;
+		display: block;
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+.formWrap {
+	width: 100%;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.formInput {
+	height: inherit;
+	padding: 0 0 0 22px;
+	font-family: 'Fira Code', Consolas, Menlo, 'Courier New', monospace;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 14px 0 0 14px;
+}
+
+.formBtn {
+	@include scanBtn;
+	border-radius: 0 14px 14px 0;
+
+	path {
+		stroke: #fff;
+	}
+}
+
+.again {
+	display: block;
+	@include scanBtn;
+	height: 54px;
+	width: 80%;
+	margin: 20px auto;
+	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid $redColor;
+	color: $redColor;
+
+	&:active {
+		color: #ffffff;
+		background-color: $redColor;
+	}
+}
+
+.successWrap {
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	gap: 20px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.successTop {
+	span {
+		font-weight: 700;
+	}
+}
+
+.successAmount {
+	width: 40%;
+	margin: 0 auto;
+	font-family: 'Fira Code', Consolas, Menlo, 'Courier New', monospace;
+	font-size: 33px;
+	font-weight: 700;
+	color: #fff;
+	background: linear-gradient(92.23deg, #7de481 9.24%, #46cd4b 95.15%);
+	padding: 10px 20px;
+	border-radius: 10px;
+}
+
+.successLinkHome,
+.successLinkNext {
+	margin: 0 auto;
+	width: 60%;
+	color: #fff;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+.successLinkHome {
+	background-color: #e5465c;
+}
+
+.successLinkNext {
+	background-color: #0d2486;
+}

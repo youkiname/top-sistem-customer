@@ -1,0 +1,56 @@
+.polls {
+	display: flex;
+	flex-flow: column;
+	gap: 15px;
+}
+
+.pollBody {
+	height: 50px;
+	padding: 0 20px;
+	border: 2px solid #6c138a;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all 300ms ease;
+
+	input {
+		display: none;
+	}
+
+	label {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+}
+
+.checkedPoll {
+	background: linear-gradient(
+		45deg,
+		rgb(232, 91, 234) 18%,
+		rgb(114, 82, 182) 100%
+	);
+	color: #fff;
+}
+
+.pollButton {
+	width: 100%;
+	height: 50px;
+	margin-top: 30px;
+	background: linear-gradient(92.23deg, #6c138a 9.24%, #b847da 95.15%);
+	border: none;
+	border-radius: 9px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+
+	&:disabled {
+		background: linear-gradient(92.23deg, #7de481 9.24%, #46cd4b 95.15%);
+	}
+}

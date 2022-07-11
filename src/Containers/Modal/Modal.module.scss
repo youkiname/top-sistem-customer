@@ -1,0 +1,45 @@
+.modal {
+  z-index: 2000;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .4);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease-in-out;
+}
+
+.active {
+  pointer-events: all;
+  opacity: 1;
+  z-index: 2000;
+}
+
+.modalContent {
+  padding: 30px;
+  height: auto;
+  width: auto;
+  background: #fff;
+  border-radius: 20px;
+}
+.subContent {
+  padding: 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 48px;
+}
+.closeBtn {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='25' height='28' viewBox='0 0 25 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L23.5333 27' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M23.5333 1L0.999993 27' stroke='black' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,13 @@
+.wrapper {
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+	gap: 20px;
+}
+
+.listItem {
+	flex: 1;
+}

@@ -1,0 +1,47 @@
+.wrapper {
+	width: auto;
+	height: auto;
+	border-radius: 19px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(94.61deg, #a8c1e8 4.03%, #aba7d7 100.44%);
+	gap: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+
+	img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.img {
+	max-width: 46px;
+	height: auto;
+	flex: 1 1;
+}
+
+.descrBlock {
+	flex: 1 1;
+	text-align: left;
+	height: auto;
+	color: #000;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 100.9%;
+	margin-bottom: 7px;
+}
+
+.description {
+	font-weight: 400;
+	font-size: 8px;
+	line-height: 141.9%;
+}

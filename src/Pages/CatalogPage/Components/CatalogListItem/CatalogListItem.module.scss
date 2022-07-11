@@ -1,0 +1,82 @@
+.wrapper {
+  min-width: 100%;
+  min-height: 140px;
+  padding: 16px 10px 20px 10px;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.logo {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  border: 1px solid #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.titles {
+  flex: 1 1 auto;
+  margin-left: 10px;
+}
+.name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 11px;
+}
+.address {
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 9px;
+  color: #606060;
+}
+.choice {
+  display: block;
+  width: 100%;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.05);
+  border-radius: 9px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 9px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  &:active {
+    box-shadow: inset 0 0 9px rgba(0, 0, 0, 0.05);
+  }
+}
+.chosen {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #76F374;
+  box-shadow: 0 0 4px rgba(118, 243, 116, 0.23);
+  border-radius: 9px;
+}
+.more {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 9px;
+  text-align: center;
+  color: #606060;
+  text-decoration: none;
+}

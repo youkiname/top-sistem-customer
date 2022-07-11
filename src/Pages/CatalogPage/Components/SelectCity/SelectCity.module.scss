@@ -1,0 +1,17 @@
+.formItem {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+
+  label {
+    z-index: 20;
+    display: block;
+    position: absolute;
+    top: 7px;
+    left: 22px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #525252;
+  }
+}
