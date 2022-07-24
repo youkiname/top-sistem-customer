@@ -9,7 +9,6 @@ import cls from './scss/Messages.module.scss'
 
 
 const Messages = () => {
-	const user = useSelector((state) => state.user)
 	const [list, setList] = useState([])
 	const [loading, setLoading] = useState(true)
 	const [err, setErr] = useState(false)
@@ -17,7 +16,7 @@ const Messages = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			api
-				.getPollsList(user.id)
+				.getPollsList()
 				.then((res) => {
 					setList(res.data)
 				})

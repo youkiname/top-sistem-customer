@@ -34,7 +34,7 @@ class Api {
 
 	getAuth(email, password) {
 		return this.instance
-			.get(`auth/customer?email=${email}&password=${password}`)
+			.get(`customer/auth?email=${email}&password=${password}`)
 			.then(onResponse)
 	}
 
@@ -45,7 +45,7 @@ class Api {
 	}
 
 	getShoppingCenters() {
-		return this.instance.get(`shopping_centers`).then(onResponse)
+		return this.instance.get(`customer/shopping_centers`).then(onResponse)
 	}
 
 	register(email, password, birth, sex, lastName, firstName, phone) {
@@ -58,25 +58,25 @@ class Api {
 
 	getUserByCardNumber(number) {
 		return this.instance
-			.get(`users?card_number=${number}`)
+			.get(`customer/users/by_card_number?card_number=${number}`)
 			.then(onResponse)
 	}
 
 	postBonusTransaction(number, bonus, mode) {
 		return this.instance.post(
-			`cards/update_bonuses?card_number=${number}&offset=${mode + bonus
+			`customer/cards/update_bonuses?card_number=${number}&offset=${mode + bonus
 			}`
 		)
 	}
 
 	getAdsImages() {
-		return this.instance.get(`banners`).then(onResponse)
+		return this.instance.get(`customer/banners`).then(onResponse)
 	}
 
 	updateProfile(id, firstName, lastName, phone) {
 		return this.instance
-			.post(
-				`users/update_profile?id=${id}&first_name=${firstName}&last_name=${lastName}&mobile=${phone}`
+			.put(
+				`customer/update_profile?id=${id}&first_name=${firstName}&last_name=${lastName}&mobile=${phone}`
 			)
 			.then(onResponse)
 	}
@@ -87,28 +87,28 @@ class Api {
 			.then(onResponse)
 	}
 
-	getPollsList(id) {
+	getPollsList() {
 		return this.instance
-			.get(`polls/shopping_centers?user_id=${id}`)
+			.get(`customer/polls/shopping_centers`)
 			.then(onResponse)
 	}
 
 	getPollBySCId(id) {
 		return this.instance
-			.get(`polls?shopping_center_id=${id}`)
+			.get(`customer/polls?shopping_center_id=${id}`)
 			.then(onResponse)
 	}
 
 	getPollByUser(pollId, userId) {
 		return this.instance
-			.get(`polls/${pollId}?user_id=${userId}`)
+			.get(`customer/polls/${pollId}?user_id=${userId}`)
 			.then(onResponse)
 	}
 
 	setPollChoice(userId, pollId, choiceId) {
 		return this.instance
 			.post(
-				`polls/make_choice?user_id=${userId}&poll_id=${pollId}&choice_id=${choiceId}`
+				`customer/polls/make_choice?user_id=${userId}&poll_id=${pollId}&choice_id=${choiceId}`
 			)
 			.then(onResponse)
 	}
