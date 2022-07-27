@@ -22,9 +22,10 @@ export const selectShoppingCenter = createAsyncThunk(
 	'shoppingCenters/selectShoppingCenter',
 	async ({ userId, centerId }, { rejectWithValue, dispatch }) => {
 		try {
-			const res = await api.updateBalanceDueToChoice(userId, centerId)
-			dispatch(setDataCard(res.data.card))
-			return res.data.card
+			const res = await api.updateBalanceDueToChoice(centerId)
+			api.saveVisitor(centerId)
+			dispatch(setDataCard(res.data))
+			return res.data
 		} catch (e) {
 			return rejectWithValue(e)
 		}

@@ -2,8 +2,8 @@ import axios from 'axios'
 
 // Create axios instance with base url and credentials support
 export const axiosInstance = axios.create({
-	baseURL: "https://top-sistem.ru/api/",
-	// baseURL: "http://127.0.0.1:8000/api/",
+	// baseURL: "https://top-sistem.ru/api/",
+	baseURL: "http://127.0.0.1:8000/api/",
 	withCredentials: true,
 	credentials: true,
 	headers: {
@@ -113,9 +113,17 @@ class Api {
 			.then(onResponse)
 	}
 
-	updateBalanceDueToChoice(userId, centerId) {
+	updateBalanceDueToChoice(centerId) {
 		return this.instance
-			.get(`users/${userId}?shopping_center_id=${centerId}`)
+			.get(`get_card/?shopping_center_id=${centerId}`)
+			.then(onResponse)
+	}
+
+	saveVisitor(centerId) {
+		return this.instance
+			.post(`customer/statistic/visitors`, {
+				shopping_center_id: centerId
+			})
 			.then(onResponse)
 	}
 
